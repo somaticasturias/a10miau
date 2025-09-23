@@ -23,7 +23,6 @@
   const lineasAscii = arteAscii.split('\n');
   const contenedorAscii = document.getElementById('ascii');
   let contadorLinea = 0;
-
   function mostrarLineaAscii() {
     if (contadorLinea < lineasAscii.length) {
       contenedorAscii.innerHTML += lineasAscii[contadorLinea] + '\n';
@@ -31,10 +30,7 @@
       setTimeout(mostrarLineaAscii, 100);
     }
   }
-
-  
   document.getElementById('entrar').style.display = 'block';
-
   const lineasMenu = [
     '> a10-miau presenta:',
     ' ',
@@ -46,54 +42,41 @@
     '<div><span onclick="mostrarSubmenuContacto()" role="button" class="manita">6. Contacto</span><div id="submenu-contacto" style="margin-top:0.5rem;"></div></div>',
     '<span onclick="salir()" role="button" class="manita">7. Salir</span>'
   ];
-
   const submenuProyectos = [
     '<a href="https://somaticasturias.github.io/diseno/" target="_blank" class="enlace-verde">   - Diseño.</a>'
   ];
-
   const submenuWebs = [
     '<a href="https://www.exconxuraos.es/" target="_blank" rel="noopener noreferrer" class="enlace-verde">   - Exconxuraos de Llanera</a>'
   ];
-
   const submenuContacto = [
     '<a href="mailto:a10miau@outlook.es" class="enlace-verde">   - a10miau@outlook.es</a>'
-];
-
-  
-
+  ];
   function escribirLineaHTML(texto, destino = 'menu') {
     const div = document.createElement('div');
     div.innerHTML = texto;
     div.style.marginBottom = '0.5rem';
     document.getElementById(destino).appendChild(div);
   }
-
   menuMostrado = false;
-
   function mostrarMenu() {
     if (menuMostrado) return;
     menuMostrado = true;
 
     for (const linea of lineasMenu) {
       escribirLineaHTML(linea, 'menu');
-    }
-
-    
-    mostrarLineaAscii();
   }
-
+  mostrarLineaAscii();
+  }
   function mostrarSubmenu() {
     for (const linea of submenuProyectos) {
       escribirLineaHTML(linea, 'submenu-proyectos');
     }
   }
-
   function mostrarSubmenuWebs() {
     for (const linea of submenuWebs) {
       escribirLineaHTML(linea, 'submenu-webs');
     }
   }
-
   function mostrarSubmenuContacto() {
   for (const linea of submenuContacto) {
     escribirLineaHTML(linea, 'submenu-contacto');
@@ -102,9 +85,7 @@
 function mostrarMenuConAnimacion() {
   if (menuMostrado) return;
   menuMostrado = true;
-
   let indice = 0;
-
   function escribirSiguienteLinea() {
     if (indice < lineasMenu.length) {
       escribirLineaHTML(lineasMenu[indice], 'menu');
@@ -117,13 +98,8 @@ function mostrarMenuConAnimacion() {
       mostrarLineaAscii();
     }
   }
-
   escribirSiguienteLinea();
 }
-
-
-
-
   const frasesSalida = [
     '¿Por qué te sales?',
     '¡Pero si aún no lo has visto todo!',
@@ -139,10 +115,8 @@ function mostrarMenuConAnimacion() {
     '¿Soñaré con ovejas eléctricas?',
     '¿Podrías hacerme un pequeño favor?'
   ];
-
   let intervaloSalidaID = null;
   let modoSalidaActivo = false;
-
   function salir() {
     if (modoSalidaActivo) return;
     modoSalidaActivo = true;
@@ -153,9 +127,7 @@ function mostrarMenuConAnimacion() {
       indice++;
     }, 600);
   }
-
-  
-document.addEventListener('click', (evento) => {
+  document.addEventListener('click', (evento) => {
   if (modoSalidaActivo && !evento.target.closest('span[onclick="salir()"]')) {
     clearInterval(intervaloSalidaID);
     intervaloSalidaID = null;
@@ -163,6 +135,6 @@ document.addEventListener('click', (evento) => {
     document.getElementById('menu').innerHTML = '';
     menuMostrado = false; 
     mostrarMenuConAnimacion();
-;
   }
 });
+
