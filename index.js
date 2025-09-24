@@ -38,7 +38,7 @@
     '<div><span onclick="mostrarSubmenuWebs()" role="button" class="manita">2. Páginas web</span><div id="submenu-webs" style="margin-top:0.5rem;"></div></div>',
     '<div><span onclick="mostrarSubmenu()" role="button" class="manita">3. Demos de páginas web</span><div id="submenu-proyectos" style="margin-top:0.5rem;"></div></div>',
     '<a href="https://a10miau.wixsite.com/squarelab" target="_blank" rel="noopener noreferrer" class="enlace-verde">4. Square Lab</a>',
-    '<a href="https://lasvocesdelbosque.wordpress.com/" target="_blank" rel="noopener noreferrer" class="enlace-verde">5. Las sombras del bosque</a>',
+    '<a href="https://lasvocesdelbosque.wordpress.com/" target="_blank" rel="noopener noreferrer" class="enlace-verde">5. Las voces del bosque</a>',
     '<div><span onclick="mostrarSubmenuContacto()" role="button" class="manita">6. Contacto</span><div id="submenu-contacto" style="margin-top:0.5rem;"></div></div>',
     '<span onclick="salir()" role="button" class="manita">7. Salir</span>'
   ];
@@ -137,4 +137,5 @@ function mostrarMenuConAnimacion() {
     mostrarMenuConAnimacion();
   }
 });
+
 
