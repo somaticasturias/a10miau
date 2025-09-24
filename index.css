@@ -11,6 +11,7 @@
         white-space: pre-wrap; 
     }
     #ascii {
+        font-size: 0.6rem;
         overflow: hidden;
     }
     #entrar {
@@ -39,10 +40,12 @@
       body {
         font-size: 1.6em;;
       }
+     
     }
 /* Escritorio */
     @media (min-width: 1281px) {
       body {
         font-size: 1.6rem;
-      }
+      }  
     }
+
