@@ -34,6 +34,9 @@
       body {
         font-size: 1.5rem;
       }
+      #ascii {
+        font-size: 1.2rem;
+    }
     }
 /* Tablets en modo landscape */
     @media (min-width: 800px) and (max-width: 1280px) and (orientation: landscape) {
@@ -41,7 +44,7 @@
         font-size: 1.6em;;
       }
       #ascii {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     }
 /* Escritorio */
@@ -53,6 +56,3 @@
         font-size: 1.2rem;
     }
     }
-
-
-
