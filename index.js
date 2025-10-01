@@ -78,27 +78,17 @@
     }
   }
   function mostrarSubmenuContacto() {
-  for (const linea of submenuContacto) {
+    for (const linea of submenuContacto) {
     escribirLineaHTML(linea, 'submenu-contacto');
   }
 }
-function mostrarMenuConAnimacion() {
-  if (menuMostrado) return;
-  menuMostrado = true;
-  let indice = 0;
-  function escribirSiguienteLinea() {
-    if (indice < lineasMenu.length) {
-      escribirLineaHTML(lineasMenu[indice], 'menu');
-      indice++;
-      setTimeout(escribirSiguienteLinea, 400); // velocidad ajustable
-    } else {
-      // Reinicia y vuelve a escribir el ASCII desde cero
-      contadorLinea = 0;
-      contenedorAscii.innerHTML = '';
-      mostrarLineaAscii();
-    }
+  function mostrarMenu() {
+    if (menuMostrado) return;
+    menuMostrado = true;
+    for (const linea of lineasMenu) {
+    escribirLineaHTML(linea, 'menu');
   }
-  escribirSiguienteLinea();
+  contenedorAscii.innerHTML = arteAscii;
 }
   const frasesSalida = [
     '¿Por qué te sales?',
@@ -128,7 +118,7 @@ function mostrarMenuConAnimacion() {
     }, 600);
   }
   document.addEventListener('click', (evento) => {
-  if (modoSalidaActivo && !evento.target.closest('span[onclick="salir()"]')) {
+    if (modoSalidaActivo && !evento.target.closest('span[onclick="salir()"]')) {
     clearInterval(intervaloSalidaID);
     intervaloSalidaID = null;
     modoSalidaActivo = false;
@@ -137,7 +127,3 @@ function mostrarMenuConAnimacion() {
     mostrarMenuConAnimacion();
   }
 });
-
-
-
-
