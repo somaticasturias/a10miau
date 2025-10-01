@@ -43,7 +43,7 @@
     '<span onclick="salir()" role="button" class="manita">7. Salir</span>'
   ];
   const submenuProyectos = [
-    '<a href="https://somaticasturias.github.io/diseno/" target="_blank" class="enlace-verde">   - En construcción.</a>'
+    '<a href="https://somaticasturias.github.io/diseno/" target="_blank" class="enlace-verde">   - En construcción</a>'
   ];
   const submenuWebs = [
     '<a href="https://www.exconxuraos.es/" target="_blank" rel="noopener noreferrer" class="enlace-verde">   - Exconxuraos de Llanera</a>'
@@ -137,6 +137,7 @@ function mostrarMenuConAnimacion() {
     mostrarMenuConAnimacion();
   }
 });
+
 
 
 
