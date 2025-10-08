@@ -1,0 +1,58 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: black;
+        color: #54fd54;
+        font-family: monospace, sans-serif;
+        padding: 1rem;
+        white-space: pre-wrap; 
+    }
+    #ascii {
+        font-size: 0.6rem;
+        overflow: hidden;
+    }
+    #entrar {
+        margin-top: 1rem;
+        cursor: pointer;
+        display: none;
+    }
+    #menu {
+        margin-top: 1rem;
+    }
+    .enlace-verde {
+        color: #54fd54;
+        text-decoration: none;
+    }
+    .manita {
+        cursor: pointer;
+    }
+/* Tablets en modo retrato */
+    @media (min-width: 800px) and (max-width: 1280px) and (orientation: portrait) {
+      body {
+        font-size: 1.5rem;
+      }
+      #ascii {
+        font-size: 1.2rem;
+    }
+    }
+/* Tablets en modo landscape */
+    @media (min-width: 800px) and (max-width: 1280px) and (orientation: landscape) {
+      body {
+        font-size: 1.6em;;
+      }
+      #ascii {
+        font-size: 1rem;
+    }
+    }
+/* Escritorio */
+    @media (min-width: 1281px) {
+      body {
+        font-size: 1.6rem;
+      }  
+      #ascii {
+        font-size: 1.2rem;
+    }
+    }
